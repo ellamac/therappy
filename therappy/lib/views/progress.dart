@@ -11,6 +11,6 @@ class Progress extends StatefulWidget {
 class _ProgressState extends State<Progress> {
   @override
   Widget build(BuildContext context) {
-    return const Text('hi! I am the progress view :)');
+    return const Text('Hi! I am the progress view :-)');
   }
 }
