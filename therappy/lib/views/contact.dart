@@ -11,6 +11,6 @@ class Contact extends StatefulWidget {
 class _ContactState extends State<Contact> {
   @override
   Widget build(BuildContext context) {
-    return const Text('hi! I am the Contact view :)');
+    return const Text('Hi! I am the Contact view ;)');
   }
 }
