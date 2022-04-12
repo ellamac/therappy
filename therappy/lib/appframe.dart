@@ -50,7 +50,9 @@ class _AppFrameState extends State<AppFrame> {
 
       /* main content from views */
       body: Center(
-        child: _pages.elementAt(_selectedIndex),
+        child: Container(
+            margin: const EdgeInsets.all(15.0),
+            child: _pages.elementAt(_selectedIndex)),
       ),
 
       /* bottom bar */
