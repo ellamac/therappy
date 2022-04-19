@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 /* import and use with PostWidget(name, message, isSelf)*/
@@ -23,25 +22,20 @@ class PostWidget extends StatelessWidget {
     return isSelf
         ? Card(
             child: ListTile(
-              contentPadding: EdgeInsets.all(16),
+              contentPadding: const EdgeInsets.all(16),
               /*container with initials of poster*/
               leading: Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       color: Colors.teal,
-                      borderRadius: BorderRadius.all(Radius.circular(20))
-                  ),
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
                   height: 40,
                   width: 40,
-                  child: Center (
-                      child: Text(
-                          getInitials(name),
+                  child: Center(
+                      child: Text(getInitials(name),
                           textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white
-                          ))
-                  )
-              ),
+                          style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white)))),
               /*Name of poster as title*/
               title: Text(name),
               /*content of posted message*/
@@ -51,18 +45,18 @@ class PostWidget extends StatelessWidget {
                 height: 30,
                 width: 30,
                 decoration: BoxDecoration(
-                  color: Colors.teal[100],
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  boxShadow: [BoxShadow(
-                    color: Colors.grey.withOpacity(0.6),
-                    spreadRadius: 1,
-                    blurRadius: 1,
-                    offset: Offset(1,3),
-                  )]
-                ),
-                child: Center(
-                  child: const Icon(Icons.mode_edit, color: Colors.white)
-                ),
+                    color: Colors.teal[100],
+                    borderRadius: const BorderRadius.all(Radius.circular(10)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.6),
+                        spreadRadius: 1,
+                        blurRadius: 1,
+                        offset: const Offset(1, 3),
+                      )
+                    ]),
+                child: const Center(
+                    child: Icon(Icons.mode_edit, color: Colors.white)),
               ),
             ),
             margin: const EdgeInsets.all(5.0),
@@ -70,43 +64,34 @@ class PostWidget extends StatelessWidget {
             shape: RoundedRectangleBorder(
               side: const BorderSide(color: Colors.grey, width: 1.0),
               borderRadius: BorderRadius.circular(10.0),
-            )
-          )
-          : Card(
+            ))
+        : Card(
             child: ListTile(
-                contentPadding: EdgeInsets.all(16),
-            /*container with initials of poster*/
-              leading: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.teal,
-                      borderRadius: BorderRadius.all(Radius.circular(20))
-                  ),
-                  height: 40,
-                  width: 40,
-                  child: Center (
-                      child: Text(
-                          getInitials(name),
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white
-                          ))
-                  )
-              ),
-               /*Name of poster as title*/
-              title: Text(name),
-              /*content of posted message*/
-              subtitle: Text(message)
-          ),
+                contentPadding: const EdgeInsets.all(16),
+                /*container with initials of poster*/
+                leading: Container(
+                    decoration: const BoxDecoration(
+                        color: Colors.teal,
+                        borderRadius: BorderRadius.all(Radius.circular(20))),
+                    height: 40,
+                    width: 40,
+                    child: Center(
+                        child: Text(getInitials(name),
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white)))),
+                /*Name of poster as title*/
+                title: Text(name),
+                /*content of posted message*/
+                subtitle: Text(message)),
             margin: const EdgeInsets.all(5.0),
             elevation: 3,
             shape: RoundedRectangleBorder(
-            side: const BorderSide(color: Colors.grey, width: 1.0),
-            borderRadius: BorderRadius.circular(10.0),
-      )
-    );
+              side: const BorderSide(color: Colors.grey, width: 1.0),
+              borderRadius: BorderRadius.circular(10.0),
+            ));
   }
-
 
 /*Helper function to get initials*/
   String getInitials(name) {
@@ -115,5 +100,4 @@ class PostWidget extends StatelessWidget {
 
     return initials.toUpperCase();
   }
-
 }
