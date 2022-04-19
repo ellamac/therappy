@@ -45,12 +45,6 @@ class GoalWidget extends StatelessWidget {
               trailing: trail,
               contentPadding: const EdgeInsets.all(16.0),
             ),
-            margin: const EdgeInsets.all(5.0),
-            elevation: 3,
-            shape: RoundedRectangleBorder(
-              side: const BorderSide(color: Colors.grey, width: 1.0),
-              borderRadius: BorderRadius.circular(10.0),
-            ),
           );
   }
 }
