@@ -80,9 +80,10 @@ class _ProgressState extends State<Progress> {
         ),
         /* THERAPY PLAN BUTTON */
         ElevatedButton(
+          // ignore: avoid_print
           onPressed: () => print('hi'),
-          style: ElevatedButton.styleFrom(
-              padding: const EdgeInsets.symmetric(vertical: 30.0)),
+          //style: ElevatedButton.styleFrom(
+          // padding: const EdgeInsets.symmetric(vertical: 30.0)),
           child: const Text('See Therapy Plan'),
         )
       ],

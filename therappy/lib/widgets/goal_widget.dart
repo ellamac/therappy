@@ -43,7 +43,7 @@ class GoalWidget extends StatelessWidget {
               title: Text(goal),
               subtitle: Text(explanation),
               trailing: trail,
-              contentPadding: EdgeInsets.all(16.0),
+              contentPadding: const EdgeInsets.all(16.0),
             ),
             margin: const EdgeInsets.all(5.0),
             elevation: 3,
