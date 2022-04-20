@@ -24,7 +24,13 @@ class GoalWidget extends StatelessWidget {
     return done
         ? Card(
             child: ListTile(
-              leading: const Icon(Icons.check_circle),
+              leading: CircleAvatar(
+                child: const Text(
+                  'A',
+                  style: TextStyle(color: Colors.white),
+                ),
+                backgroundColor: Colors.amber.shade400,
+              ),
               title: Text(goal),
               subtitle: Text(explanation),
               trailing: trail,
@@ -39,7 +45,7 @@ class GoalWidget extends StatelessWidget {
           )
         : Card(
             child: ListTile(
-              leading: const Icon(Icons.run_circle),
+              leading: const CircleAvatar(child: Text('A')),
               title: Text(goal),
               subtitle: Text(explanation),
               trailing: trail,

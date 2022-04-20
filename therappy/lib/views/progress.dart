@@ -46,20 +46,30 @@ class _ProgressState extends State<Progress> {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         /* PROGRESS TITLE */
-        Wrap(
-          alignment: WrapAlignment.spaceBetween,
-          children: const [Icon(Icons.arrow_back), Text("Progress"), Spacer()],
+        const Text(
+          "Progress",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
+
         /* PROGRESS CHART */
         SizedBox(
             height: 275,
             child: Card(
               color: Colors.teal[50],
-              margin: const EdgeInsets.only(bottom: 15.0),
+              margin: const EdgeInsets.symmetric(vertical: 15.0),
               elevation: 3,
               child: Container(
                 padding: const EdgeInsets.all(10.0),
-                child: Expanded(child: DailyChart(data: data)),
+                child: Column(
+                  children: [
+                    const Text(
+                        "The bar shows how many minutes per day you have excercised."),
+                    Expanded(
+                      child: DailyChart(data: data),
+                    ),
+                  ],
+                ),
                 /*Icon(
                 Icons.insert_chart,
                 size: 225.0,
