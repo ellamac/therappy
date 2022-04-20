@@ -65,20 +65,9 @@ class _CommunityState extends State<Community> {
         )),
         /*New post button*/
         ElevatedButton(
-            onPressed: () {},
-            child: const Text('New Post',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontWeight: FontWeight.bold, color: Colors.white)),
-            style: ButtonStyle(
-              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12.0))),
-              padding: MaterialStateProperty.resolveWith<EdgeInsetsGeometry>(
-                  (Set<MaterialState> states) {
-                return const EdgeInsets.all(20);
-              }),
-            ))
+          onPressed: () {},
+          child: const Text('New Post'),
+        )
       ],
     );
   }

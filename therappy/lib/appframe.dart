@@ -60,9 +60,6 @@ class _AppFrameState extends State<AppFrame> {
       /* bottom bar */
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.teal[50],
-        selectedItemColor: Colors.teal,
-        unselectedItemColor: Colors.black,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         items: const <BottomNavigationBarItem>[
