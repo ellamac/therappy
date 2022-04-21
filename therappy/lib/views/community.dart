@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:therappy/widgets/inner_shadow_card.dart';
 import 'package:therappy/widgets/community_post_widget.dart';
 
+
+
 /* Topbar - main content from views - bottom bar */
 class Community extends StatefulWidget {
   const Community({Key? key}) : super(key: key);
@@ -18,18 +20,16 @@ class _CommunityState extends State<Community> {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         /* COMMUNITY TITLE */
-        Wrap(
-          alignment: WrapAlignment.spaceBetween,
-          children: const [
-            Icon(Icons.arrow_back),
-            Text("Community Feed"),
-            Spacer()
-          ],
+        const Text(
+          "Community Feed",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
+
         /* COMMUNITY FEED*/
         InnerShadowCard(
             child: SizedBox(
-          height: 500,
+          height: 480,
           child: ListView(
             physics: const AlwaysScrollableScrollPhysics(),
             /* COMMUNITY FEED POSTS */

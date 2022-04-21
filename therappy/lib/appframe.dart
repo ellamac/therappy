@@ -35,6 +35,7 @@ class _AppFrameState extends State<AppFrame> {
     return Scaffold(
       /* top bar */
       appBar: AppBar(
+        centerTitle: true,
         leading: const IconButton(
           icon: Icon(Icons.menu),
           tooltip: 'menu',
@@ -67,7 +68,7 @@ class _AppFrameState extends State<AppFrame> {
           BottomNavigationBarItem(icon: Icon(Icons.folder), label: 'Progress'),
           BottomNavigationBarItem(icon: Icon(Icons.group), label: 'community'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.add), label: 'Contact Therapist'),
+              icon: Icon(Icons.medical_services), label: 'Therapist Inbox'),
         ],
       ),
     );

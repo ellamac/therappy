@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:therappy/widgets/post_menu_widget.dart';
+import 'package:therappy/widgets/post_menu_widget.dart';
+
 
 /* import and use with PostWidget(name, message, isSelf)*/
 /* name = a String with the name the user who posted message (e.g. "Merja Järvinen") */
@@ -39,24 +42,11 @@ class PostWidget extends StatelessWidget {
               /*Name of poster as title*/
               title: Text(name),
               /*content of posted message*/
-              subtitle: Text(message),
-              /*Container with edit icon*/
-              trailing: Container(
-                height: 30,
-                width: 30,
-                decoration: BoxDecoration(
-                    color: Colors.teal[100],
-                    borderRadius: const BorderRadius.all(Radius.circular(10)),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.6),
-                        spreadRadius: 1,
-                        blurRadius: 1,
-                        offset: const Offset(1, 3),
-                      )
-                    ]),
-                child: const Center(
-                    child: Icon(Icons.mode_edit, color: Colors.white)),
+              subtitle: Column(
+                //used align widget as some of the text was strangely aligned, this fixed it
+                children: <Widget>[Align(alignment: Alignment.topLeft, child:Text(message)),
+                  Align(alignment: Alignment.bottomRight, child: PostMenu()),
+                ],
               ),
             ),
             margin: const EdgeInsets.all(5.0),
