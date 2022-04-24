@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:therappy/widgets/post_menu_widget.dart';
-import 'package:therappy/widgets/post_menu_widget.dart';
-
 
 /* import and use with PostWidget(name, message, isSelf)*/
 /* name = a String with the name the user who posted message (e.g. "Merja Järvinen") */
@@ -44,8 +42,10 @@ class PostWidget extends StatelessWidget {
               /*content of posted message*/
               subtitle: Column(
                 //used align widget as some of the text was strangely aligned, this fixed it
-                children: <Widget>[Align(alignment: Alignment.topLeft, child:Text(message)),
-                  Align(alignment: Alignment.bottomRight, child: PostMenu()),
+                children: <Widget>[
+                  Align(alignment: Alignment.topLeft, child: Text(message)),
+                  const Align(
+                      alignment: Alignment.bottomRight, child: PostMenu()),
                 ],
               ),
             ),

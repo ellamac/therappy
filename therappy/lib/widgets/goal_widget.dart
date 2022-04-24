@@ -9,15 +9,15 @@ class GoalWidget extends StatelessWidget {
   const GoalWidget({
     Key? key,
     required this.goal,
+    required this.goalIcon,
     required this.explanation,
     required this.done,
-    required this.trail,
   }) : super(key: key);
 
   final String goal;
+  final IconData goalIcon;
   final String explanation;
   final bool done;
-  final Icon trail;
 
   @override
   Widget build(BuildContext context) {
@@ -25,15 +25,16 @@ class GoalWidget extends StatelessWidget {
         ? Card(
             child: ListTile(
               leading: CircleAvatar(
-                child: const Text(
-                  'A',
-                  style: TextStyle(color: Colors.white),
+                child: Icon(
+                  goalIcon,
+                  color: Colors.white,
+                  size: 20,
                 ),
                 backgroundColor: Colors.amber.shade400,
               ),
               title: Text(goal),
               subtitle: Text(explanation),
-              trailing: trail,
+              trailing: const Icon(Icons.more_horiz),
             ),
             margin: const EdgeInsets.all(5.0),
             color: Colors.grey[300],
@@ -45,11 +46,17 @@ class GoalWidget extends StatelessWidget {
           )
         : Card(
             child: ListTile(
-              leading: const CircleAvatar(child: Text('A')),
+              leading: CircleAvatar(
+                child: Icon(
+                  goalIcon,
+                  color: Colors.white,
+                  size: 20,
+                ),
+              ),
               title: Text(goal),
               subtitle: Text(explanation),
-              trailing: trail,
-              contentPadding: const EdgeInsets.all(16.0),
+              trailing: const Icon(Icons.more_horiz),
+              minVerticalPadding: 0,
             ),
           );
   }
