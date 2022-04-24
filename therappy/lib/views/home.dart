@@ -11,6 +11,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return const Text('Hi! I am the Home view ;)');
+    return const Text(
+        'Hi, I am the Home view! This page has not been implemented yet. Check out Progress and Community instead! :)');
   }
 }

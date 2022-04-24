@@ -17,16 +17,16 @@ class _ProgressState extends State<Progress> {
     ProgressSeries(
       date: "15.4.",
       mins: 60,
-      barColor: charts.ColorUtil.fromDartColor(Colors.orange.shade100),
+      barColor: charts.ColorUtil.fromDartColor(Colors.orange.shade500),
     ),
     ProgressSeries(
         date: "16.4.",
         mins: 15,
-        barColor: charts.ColorUtil.fromDartColor(Colors.orange.shade300)),
+        barColor: charts.ColorUtil.fromDartColor(Colors.orange.shade100)),
     ProgressSeries(
         date: "17.4.",
         mins: 25,
-        barColor: charts.ColorUtil.fromDartColor(Colors.orange.shade500)),
+        barColor: charts.ColorUtil.fromDartColor(Colors.orange.shade300)),
     ProgressSeries(
       date: "18.4.",
       mins: 20,
@@ -35,7 +35,7 @@ class _ProgressState extends State<Progress> {
     ProgressSeries(
       date: "19.4.",
       mins: 45,
-      barColor: charts.ColorUtil.fromDartColor(Colors.orange.shade300),
+      barColor: charts.ColorUtil.fromDartColor(Colors.orange.shade500),
     ),
   ];
 
@@ -54,7 +54,7 @@ class _ProgressState extends State<Progress> {
 
         /* PROGRESS CHART */
         SizedBox(
-            height: 275,
+            height: 250,
             child: Card(
               color: Colors.teal[50],
               margin: const EdgeInsets.symmetric(vertical: 15.0),
@@ -79,38 +79,38 @@ class _ProgressState extends State<Progress> {
         /* GOALS */
         InnerShadowCard(
           child: SizedBox(
-            height: 275.0,
+            height: 250.0,
             child: ListView(
               children: const <Widget>[
                 GoalWidget(
                   goal: "Current Goal",
+                  goalIcon: Icons.pan_tool_outlined,
                   explanation: "Complete grip strength tutorial",
                   done: false,
-                  trail: Icon(Icons.wb_sunny),
                 ),
                 GoalWidget(
                   goal: "Current Goal",
+                  goalIcon: Icons.event_available_outlined,
                   explanation: "Complete 3 weeks in a row!",
                   done: false,
-                  trail: Icon(Icons.wb_sunny),
                 ),
                 GoalWidget(
                   goal: "Met Goal",
+                  goalIcon: Icons.school_outlined,
                   explanation: "Mastered 10 exercises!",
                   done: true,
-                  trail: Icon(Icons.wb_sunny),
                 ),
                 GoalWidget(
                   goal: "Met Goal",
+                  goalIcon: Icons.event_available_outlined,
                   explanation: "2 Weeks in a row!",
                   done: true,
-                  trail: Icon(Icons.wb_sunny),
                 ),
                 GoalWidget(
                   goal: "Met Goal",
+                  goalIcon: Icons.event_available_outlined,
                   explanation: "1 Week in a row!",
                   done: true,
-                  trail: Icon(Icons.wb_sunny),
                 ),
               ],
             ),

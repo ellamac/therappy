@@ -66,7 +66,7 @@ class _AppFrameState extends State<AppFrame> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.house), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.folder), label: 'Progress'),
-          BottomNavigationBarItem(icon: Icon(Icons.group), label: 'community'),
+          BottomNavigationBarItem(icon: Icon(Icons.group), label: 'Community'),
           BottomNavigationBarItem(
               icon: Icon(Icons.medical_services), label: 'Therapist Inbox'),
         ],
