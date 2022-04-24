@@ -1,8 +1,26 @@
-# therappy
+# therAppy
 
 A new Flutter project.
+TherAppy was developed for the User Interfaces and Usability course at LUT.
 
-## Getting Started
+This project is prototype of a therapy interface for motion detected interactive guided therapy.
+This interface represents how the user would interact with the motion detection equipment and projection from their phone.
+The user can also communicate with their therapist and engage with a community of other patients and their family members.
+As the user completes therapy sessions, their avatar evolves, adding a gamification element.
+
+## Flutter Version
+
+- Flutter 2.10.5
+
+## To Run Program
+
+Navigate to the inner therappy directory.
+From command line or terminal use command 'flutter run' to launch project in a web browser.
+
+Alternatively, the program can be run from an IDE, such as Android Studio using an emulator.
+
+
+## Getting Started with Flutter
 
 This project is a starting point for a Flutter application.
 
@@ -14,3 +32,4 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
