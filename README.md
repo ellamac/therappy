@@ -20,7 +20,7 @@ other branches can be named my eg. by feature "card-widget". These branches can 
 1. Make sure your development branch is up to date with:
   `git pull origin develop`
 2. Create a new branch from "develop" with:
-  `git checkout -b <branch name> develop
+  `git checkout -b <branch name> develop`
 3. or continue with an already existing branch:
    `git checkout <branch name>`
 <!-- end of the list -->
